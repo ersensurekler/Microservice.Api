@@ -1,0 +1,30 @@
+{
+  "Routes": [
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "DownstreamPathTemplate": "/api/product",
+      "DownstreamScheme": "https",
+      "SwaggerKey": "product",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/product"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "DownstreamPathTemplate": "/api/customer",
+      "DownstreamScheme": "https",
+      "SwaggerKey": "customer",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/customer"
+    }
+  ]
+}
